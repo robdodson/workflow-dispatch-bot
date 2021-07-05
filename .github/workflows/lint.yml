@@ -1,4 +1,4 @@
-name: Manually triggered workflow
+name: Linter
 on:
   workflow_dispatch:
     inputs:
@@ -12,9 +12,11 @@ on:
         default: 'The Octoverse'
 
 jobs:
-  say_hello:
+  lint:
+    name: Lint
     runs-on: ubuntu-latest
     steps:
-      - run: |
-          echo "Hello ${{ github.event.inputs.name }}!"
-          echo "- in ${{ github.event.inputs.home }}!"
+      - name: Checkout
+        uses: actions/checkout@v1.0.0
+      - name: List
+        run: ls -lahG
