@@ -15,4 +15,4 @@ jobs:
   say_hello:
     runs-on: ubuntu-latest
     steps:
-      - run: ls -lahG
+      - run: echo "hello" && ls -lahG
