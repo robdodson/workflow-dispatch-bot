@@ -3,7 +3,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  say_hello:
+  list:
     runs-on: ubuntu-latest
     steps:
       - run: echo "hello" && ls -lahG
