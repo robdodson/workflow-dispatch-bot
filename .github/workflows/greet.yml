@@ -6,4 +6,7 @@ jobs:
   list:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "hello" && ls -lahG
+      - name: Checkout
+        uses: actions/checkout@v1.0.0
+      - name: List
+        run: ls -lahG
